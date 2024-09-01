@@ -1,0 +1,135 @@
+
+<html>
+<head>
+    <title>>contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('https://cdn.pixabay.com/photo/2012/03/01/00/55/flowers-19830_640.jpg');
+            
+        background-size: cover;
+        background-repeat: no-repeat;
+
+            font-family: Arial, sans-serif;
+        }
+
+        #registrationForm {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 0.8;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+      
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="nav-links" id="navlinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <!-- <li><a href="">YOUTUBE</a></li> -->
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+
+            </div>
+        </nav>  
+    </section>
+    <form id="registrationForm">
+      <h1>contact Us</h1>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required><br><br>
+
+        <label for="address">Message:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const registrationForm = document.getElementById('registrationForm');
+        registrationForm.addEventListener('submit', function(event) {
+            // Field validations
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const mobile = document.getElementById('mobile').value;
+            const address = document.getElementById('address').value;
+
+            if (firstName.length < 6 || !/^[a-zA-Z]+$/.test(firstName)) {
+                alert('First Name should contain alphabets and be at least 6 characters long');
+                event.preventDefault();
+                return;
+            }
+
+            if (lastName.length === 0) {
+                alert('Last Name should not be empty');
+                event.preventDefault();
+                return;
+            }
+
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                alert('Invalid email format');
+                event.preventDefault();
+                return;
+            }
+
+            if (!/^\d{10}$/.test(mobile)) {
+                alert('Mobile Number should contain 10 digits only');
+                event.preventDefault();
+                return;
+            }
+
+            if (address.length === 0) {
+                alert('Message should not be empty');
+                event.preventDefault();
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

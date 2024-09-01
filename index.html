@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img class="logo" src=""></a><h1 style="color: white;">Anthophile</h1>
+            <div class="nav-links" id="navlinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <!-- <li><a href="">YOUTUBE</a></li> -->
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    
+    <div class="text-box">
+        <h1>Flower Portfolio</h1>
+        <p>Explore the world with me !</p>
+        <a href="" class="hero-btn">View More</a>
+    </div>  
+    </section >
+    <section>
+        <!-- <h1 style="color: white;text-align: center;">GALLERY</h1> -->
+        <section class="gallery">
+            <div class="card">
+                <img src="https://imgcdn.floweraura.com/DSC_1243_0.jpg?tr=w-264,q-70" alt="Image 1">
+                <div class="card-content">
+                    <!-- <h2>Image 1</h2>
+                    <p>Description for Image 1</p> -->
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://imgcdn.floweraura.com/DSC_1702_1.jpg?tr=w-264,q-70" alt="Image 2">
+                <div class="card-content">
+                    <!-- <h2>Image 2</h2>
+                    <p>Description for Image 2</p> -->
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://imgcdn.floweraura.com/1-B_91.jpg?tr=w-264,q-70" alt="Image 1">
+                <div class="card-content">
+                    <!-- <h2>Image 1</h2>
+                    <p>Description for Image 1</p> -->
+                </div>
+            </div>
+            </section>
+            <br>
+            <div class="center-button">
+                <a href="gallery.html"><button class="blue-button">Show More </button></a>
+            </div>
+
+            <section class="team">
+                <h2>MySelf</h2>
+                <div class="team-member">
+                    <img src="https://media-hyd1-1.cdn.whatsapp.net/v/t61.24694-24/428264120_741860817937177_5147232589112126427_n.jpg?ccb=11-4&oh=01_Q5AaILwt5j6cznNlCRAO67HmXA5p0MdihYzQe7J2vzTVpjqJ&oe=66436D45&_nc_sid=e6ed6c&_nc_cat=105">
+                    <h3>Anushri Tiwari</h3>
+                    <p>Bouquet Desinger/Anthophile</p>
+                    
+                </div>
+                <div class="center-button">
+                    <a href="about.html"><button class="blue-button">Read My Story</button></a>
+                </div>
+            </section>
+        </section>    
+    </main>
+    <footer>
+        &copy; 2023 
+        Anthophile
+        
+    </footer>
+    <script>
+        var navlinks =document.getElementById("navlinks");
+
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+        function hideMenu() {
+            navlinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
